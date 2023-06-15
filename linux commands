@@ -148,3 +148,82 @@ cd 		: change directory
 cd ..		: to come one directory back
 rm raham -rf	: to remove the directory
 rmdir raham 	: to remove the directory
+
+
+==============================================================================================================================
+EDITOR: vi/vim editor is used to edit the files.
+cat command is used to insert the content only. 
+if we want to edit the content we need to use vim editor.
+
+i	: to insert the content
+esc	: to come out of inster mode
+
+3. SAVE MODE
+:w 	: to save the file
+:q	: to quit the file
+:wq	: to save and quit the file
+!	: forcefully
+:w! 	: to save the file forcefully
+:q!	: to quit the file forcefully
+:wq!	: to save and quit the file forcefully
+
+2. INSTER MODE : we need not be on insert mode
+
+i	: to insert the content
+I	: to go starting of line
+A	: to go ending of line
+O	: to create a new line above the existing line
+o	: to create a new line below the existing line
+
+
+1. COMMAND MODE:
+
+gg	: top of file
+shift g : bottom of file
+yy	: copie single line
+p	: to paste the line
+dd	: to delete single line
+u	: undo
+3yy	: to copy 3 lines
+3p	: to paste 3 lines
+3dd	: to delete 3 lines
+/word	: to search for a word in file
+:15	: to go to 15 th line
+:20     : to go to 20th line
+:set number: to see the lines inside of a file
+
+
+
+USERS & GROUPS:
+ec2-user is default user.
+root user is admin.
+super user is normal user created by root user.
+
+useradd raham	: to create raham user 
+cat /etc/passwd : to see list of users
+getent passwd	: to see list of users
+cat /etc/group	: to see list of groups
+getent group	: to see list of groups
+
+user -- > group & folder (home path)
+
+chown raham file1	: to change the ownership of a file
+chgrp raham file1	: to change the group of a file
+chown raham:raham file3	: to change the owner & group of a file
+
+groupadd devops		: to create the devops group
+usermod -aG devops raham: to add raham user to devops group
+usermod -aG devops vijay: to add vijay user to devops group
+
+
+
+
+
+
+
+
+
+
+
+
+https://github.com/RAHAMSHAIK007/handsonsyllabus
