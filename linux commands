@@ -216,7 +216,50 @@ usermod -aG devops raham: to add raham user to devops group
 usermod -aG devops vijay: to add vijay user to devops group
 
 
+================================================================================================================================
 
+NORMAL USER TO SUPER USER:
+
+useradd raham		: to create a user
+passwd raham		: to create a password for a user
+visudo  -- > 100 -- > yy -- > p -- > :wq
+su - raham 		: to login an raham user
+ctrl d			: to logout from current user
+
+NOTE: for non root user we need to give sudo infront of all the commands.
+
+vim /etc/sudoers /visudo: both or same files
+
+====================================================================================
+
+GREP	: GLOBAL REGULAR EXPRESSION PRINT
+to seach for the words outside of a file.
+
+grep linux file1	: To search for a word linux in file1
+grep classes file1	: To search for a word classes in file1
+grep classes file1 -i	: To search for a word classes in file1 to avoid the case sensitive.
+grep classes file1 -iv	: To ignore the lines which is having the word classes.
+grep 'word1\|word2' file1: To seach for multiple words
+
+========================================================================================
+
+SED 	: STREAM EDITOR
+to replace the words 
+
+sed 's/word1/word2/' file1	: to replace word2 with word1
+sed 's/word1/word2/; s/word3/word4/' file1	: to replace multiple words
+sed '3c abcd' file1		: to replace a complete line on a file
+sed = file1			: to print the number of lines.
+sed -n '2,5p' file1		: to print the lines from 2 to 5.
+
+
+================================================================================
+
+cat /proc/cpuinfo	: to see the cpu infromation (lscpu)
+cat /proc/meminfo	: to see the memory infromation (lsmem)
+uname			: to see the os
+cat /etc/os-release	: to see the flavor of linux os
+df -m/-h		: to see the disk size (fdisk -l)
 
 
 
