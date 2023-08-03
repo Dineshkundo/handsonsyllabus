@@ -1,272 +1,85 @@
-VIRTUAL SERVER: Server which is created on cloud/dc.
+1. ONE TIER
+2. TWO TIER
+3. THREE TIER
+4. N TIER
 
-TO CREATE SERVER WE NEED TO HAVE AWS ACCOUNT.
-TO CREATE SERVER WE NEED TO PERFORM 7 STEPS:
+TIER = LAYER = SERVE
 
-IN AWS OUR SERVERS ARE CALLED AS EC2(ELASTIC COMPUTE CLOUD) OR INSTANCES.
+LAYERS: 3 TYPES
 
-STEP-1: GIVING TAGS
-NAME: NETFLIX
+1. PRESENTATION LAYER:
 
-STEP-2: AMI (AMAZON MACHINE IMAG)
-OS: Used for communication blw user and computer.
-AMI: AMAZON LINUX 2
-IN REAL TIME 95% OF SERVERS ARE ON LINUX OS ONLY.
+# TO SEE THE APPLICATION.
+# IT IS ALSO CALLED AS CLIENT LAYER. (CLIENT=END USERS)
+# IT IS TOP LAYER OF AN APPLICATION.
+# PRESENTATION LAYER COMMUNICATES WITH APPLICATION LAYER.
 
-STEP-3: INSTANCE TYPE
-HERE WE CAN SELECT RAM & CPU FOR OUR SERVER.
-T2.MICRO = 1 CPU & 1 GB 
 
-STEP-4: KEYPAIR
-WE WILL GET 2 KEYS 1. PUBLIC KEY 2. PRIVATE KEY
-PUBLIC=AWS 
-PRIVATE=USER
-TYPE OF KEYS: PEM KEY 
+2. APPLICATION LAYER:
 
-STEP-5: NETWORK SETTING
-WE CAN SELECT NETWORK AND SECURITY GROUPS
-SSH (secure shell-22)	: used to connect to server
-ALL TRAFFIC(0-65535)	: to connect with all ports
+# TO USE THE APPLICATION.
+# IT IS ALSO CALLED AS LOGIC LAYER.
+# IT IS THE MIDDLE LAYER.
+# APPLICATION LAYER COMMUNICATE WITH BOTH PRESENTATION AND DATABASE LAYER.
 
-WE CAN CREATE 1 SECURITY GROUP AND 1 KEYPAIR AND USE FOR MULTIPLE SERVERS.
+3. DATABASE LAYER:
 
-STEP-6: STORGE (EBS VOLUME)
-THE DEFALUT STORE IS 8 GB 
-BUT WE CAN EXTEND UP TO 16 TB
+# TO STORE AND RETRIEVE DATA.
+# IT IS ALSO CALLED AS DATA LAYER.
+# IT IS LAST LAYER.
+# IT WILL COMMINCATE WITH APPLICATION LAYER.
 
-STEP-7: LUNCHING INSTANCE
 
+1. ONE TIER ARCHITECTURE:
+WE CAN CREATE ONE-TIER APPLICATION (STAND-ALONE APPLICATION)
 
+EX: VLC MEDIA PLAYER
 
-TO HOST AN APPLICATION:
-sudo -i
-yum install httpd -y
-systemctl start httpd
-systemctl status httpd
+THE PRESENTATION, APPLICATION AND DATABASE LAYER WILL BE ON A SINGLE SIDE.
+NOTE: We don't need internet.
 
+2. TWO-TIER ARCHITECTURE:
+WE CAN CREATE TWO-TIER APPLICATIONS (CLIENT-SERVER)
 
-cd /var/www/html
-yum install git -y
-===========================================================================
-TYPES OF OS:
-1. WINDOWS
-2. LINUX
-3. MAC OS
+EX: JIO SAAVAN
 
+CLIENT-SIDE: PRESENTATION, APPLICATION
+SERVER-SIDE: DATABASE LAYER
 
-LINUX IS A FREE AND OPEN-SOURCE OS.
-OS= COMMUNICATION BLW USER AND COMPUTER.
-WRITTEN IN C PROGRAMMING LANGUAGE.
-LINUS TORVALDS -- > 1991 -- > 1992
+NOTE: WE NEED THE INTERNET, HERE APP NEED TO BE ON LOCAL DEVICE.
 
-IMPORTANCE:
-86% OF MOBILES IS RUNNING ON LINUX PLATFORM.
-95% OF SERVERS IS RUNNING ON LINUX PLATFORM.
-TOP 500 SUPER COMPUTER IS RUNNING ON LINUX PLATFORM.
-SMART WATCH, REFRIGIRATOR, SMART TVS ----------- IS RUNNING ON LINUX PLATFORM.
-
-
-WHY LINUX:
-1. FREE & OPEN-SOURCE
-2. LESS BUGS
-3. SPEED 
-4. MULTI-USER BASED
-5. MULTI-PROGRAMMING SUPPORT (JAVA, PYTHON, JS) 
-6. IT WILL WORK ON ALL NETWORKS
-
-COMPONENTS: 
-KERNEL: MANAGES THE HARDWARE COMPONENTS (RAM, CPU ----)
-IT IS ALSO CALLED AS LOWEST LEVEL OF THE OPERATING SYSTEM.
+3. THREE-TIER ARCHITECTURE
+WE CAN CREATE WEB-APPLICATIONS 
 
-DAEMON: MANAGES THE BACKGROUND SERVICES (SOUNDS, LIGHTS --)
-WHEN YOU START YOUR PC.
+EX: YOUTUBE
 
-SHELL: MANAGES THE USER INPUT (COMMANDS, SCRIPTS & PROGRAMS)
-IT WILL TAKE INPUT FROM USER AND GIVES THE OUTPUT.
-
-MODES:
-1. GUI: GRAPHICAL USER INTERFACE
-2. CLI: COMMAND LINE INTERFACE 
-IN REAL TIME WE WORK ON CLI MODE (COMMAND)
-
-
-14PROMAX, 14PRO, 14PLUS, 14MINI, 14
-
-LINUX: FLAVOURS/DISTRIBUTIONS
-
-UBUNTU
-REDHAT
-CENTOS
-FEDORA
-DEBIAN
-================================================================================
-
-TERMINAL IS USED TO CONNECT TO OUR SERVERS
-EX: PUTTY, SUPER PUTTY, MOBAXTERM
-
-DOWNLOAD: https://download.mobatek.net/231sss2023031823706/MobaXterm_Portable_v23.1.zip
-
-
-ZIP -- > EXTRACT -- > START THE APPLICATION
-
-TO CONNECT -- > SSH CLIENT -- > 
-
-
-COMMANDS:
-clear: to clear the screen (ctrl + l)
-sudo -i: to switch to root user
-touch file1: to create a file
-ls/ll: to list the files
-cat file1: to show the content in file1
-more file1: to show the content in file1
-cat>>file1: to insert content in file1
-enter + ctrl d: to save the content in file1
------------------------------------------------------------------
-cp file1 file2 : to copy the content from file1 to file2
-mv file1 file4 : to rename and to move 
-rm file2       : to remove file2
-rm file3 -f    : to remove file3 forecfully
-rm * -f	       : to remove all files forcefully
-touch file{1..10} : to create 1 to 10 files
-touch java{1..10} : to create 1 to 10 java files
-touch python{1..10} : to create 1 to 10 python files
-rm j* -f	: to remove all files with starting j 
-rm p* -f	: to remove all files with starting p 
-wc filename	: to see number of lines, words and characters on file
-head filename	: top 10 lines
-head -5 numbers : to prinit top -5 lines in a file
-head -15 numbers: to print top -15 lines in a file
-tail filename	: bottom 10 lines
-tail -5 numbers : to prinit bottom -5 lines in a file
-tail -15 numbers: to print bottom -15 lines in a file
-cat -n filename	: to print the line numbers along with file
-
-
-mkdir dir1	: to create a folder
-pwd		: present/print working directory
-cd 		: change directory
-cd ..		: to come one directory back
-rm raham -rf	: to remove the directory
-rmdir raham 	: to remove the directory
-
-
-==============================================================================================================================
-EDITOR: vi/vim editor is used to edit the files.
-cat command is used to insert the content only. 
-if we want to edit the content we need to use vim editor.
+CLIENT SIDE: PRESENTATION LAYER
+APP SIDE   : APPLICATION LAYER
+DB SIDE	   : DATA BASE LAYER
 
-i	: to insert the content
-esc	: to come out of inster mode
+NOTE: WE NEED NOT TO DOWNLOAD APP ON LOCAL DEVICE
+WE CAN ACCESS THE APP FROM INTERNET.
 
-3. SAVE MODE
-:w 	: to save the file
-:q	: to quit the file
-:wq	: to save and quit the file
-!	: forcefully
-:w! 	: to save the file forcefully
-:q!	: to quit the file forcefully
-:wq!	: to save and quit the file forcefully
+4. N-TIER:
+DISTRIBUTED APPLICATIONS
 
-2. INSTER MODE : we need not be on insert mode
+HERE WE HAVE MORE THAN ONE SERVER ON THE APPLICATION.
 
-i	: to insert the content
-I	: to go starting of line
-A	: to go ending of line
-O	: to create a new line above the existing line
-o	: to create a new line below the existing line
 
 
-1. COMMAND MODE:
+COURSE: DEVOPS WITH AWS
+DURATION: 2.5 MONTHS
+FEE: 8k 
+TIMINGS: 6 - 7:30 PM
+HANDSON: 
+TOOLS: 11 TOOLS
+AWS: 10
 
-gg	: top of file
-shift g : bottom of file
-yy	: copie single line
-p	: to paste the line
-dd	: to delete single line
-u	: undo
-3yy	: to copy 3 lines
-3p	: to paste 3 lines
-3dd	: to delete 3 lines
-/word	: to search for a word in file
-:15	: to go to 15 th line
-:20     : to go to 20th line
-:set number: to see the lines inside of a file
-
-
-
-USERS & GROUPS:
-ec2-user is default user.
-root user is admin.
-super user is normal user created by root user.
-
-useradd raham	: to create raham user 
-cat /etc/passwd : to see list of users
-getent passwd	: to see list of users
-cat /etc/group	: to see list of groups
-getent group	: to see list of groups
-
-user -- > group & folder (home path)
-
-chown raham file1	: to change the ownership of a file
-chgrp raham file1	: to change the group of a file
-chown raham:raham file3	: to change the owner & group of a file
-
-groupadd devops		: to create the devops group
-usermod -aG devops raham: to add raham user to devops group
-usermod -aG devops vijay: to add vijay user to devops group
-
-
-================================================================================================================================
-
-NORMAL USER TO SUPER USER:
-
-useradd raham		: to create a user
-passwd raham		: to create a password for a user
-visudo  -- > 100 -- > yy -- > p -- > :wq
-su - raham 		: to login an raham user
-ctrl d			: to logout from current user
-
-NOTE: for non root user we need to give sudo infront of all the commands.
-
-vim /etc/sudoers /visudo: both or same files
-
-====================================================================================
-
-GREP	: GLOBAL REGULAR EXPRESSION PRINT
-to seach for the words outside of a file.
-
-grep linux file1	: To search for a word linux in file1
-grep classes file1	: To search for a word classes in file1
-grep classes file1 -i	: To search for a word classes in file1 to avoid the case sensitive.
-grep classes file1 -iv	: To ignore the lines which is having the word classes.
-grep 'word1\|word2' file1: To seach for multiple words
-
-========================================================================================
-
-SED 	: STREAM EDITOR
-to replace the words 
-
-sed 's/word1/word2/' file1	: to replace word2 with word1
-sed 's/word1/word2/; s/word3/word4/' file1	: to replace multiple words
-sed '3c abcd' file1		: to replace a complete line on a file
-sed = file1			: to print the number of lines.
-sed -n '2,5p' file1		: to print the lines from 2 to 5.
-
-
-================================================================================
-
-cat /proc/cpuinfo	: to see the cpu infromation (lscpu)
-cat /proc/meminfo	: to see the memory infromation (lsmem)
-uname			: to see the os
-cat /etc/os-release	: to see the flavor of linux os
-df -m/-h		: to see the disk size (fdisk -l)
-
-
-
-
-
-
-
+EXP: 3 YEARS
+CONTENT: 
 
 
 https://github.com/RAHAMSHAIK007/handsonsyllabus
+
+
+
