@@ -81,5 +81,98 @@ CONTENT:
 
 https://github.com/RAHAMSHAIK007/handsonsyllabus
 
+=====================================================================================
+SERVERS:
+Serves the services to the end users.
+To host the application. 
+
+
+TYPES: 
+1. WEB SERVER: PRESENTATION LAYER	: TO SEE THE APP
+2. APP SERVER: APPLICATION LAYER	: TO USE THE APP
+3. DB SERVER: DATABASE LAYER		: TO STORE & RETRIEVE DATA
+
+
+ON-PREM: PHYSICAL SERVERS
+CLOUD SERVERS: SERVERS WHICH ARE CREATED ON DATA CENTERS.
+
+AWS -- > SERVER -- > EC2 INSTANCE
+EC2: ELASTIC COMPUTE CLOUD.
+
+AGENDA -- > CREATE A SERVER & HOST NETFLIX APPLICATION
+
+TO CREATE A SERVER WE HAVE 7 STEPS:
+ASSUME SERVER = COMPUTER
+
+1. TAGS = NAME 
+2. AMI(AMAZON MACHINE IMAGE) = OS, SOFTWARES
+3. INSTANCE TYPE = RAM, CPU
+4. KEYPAIR = LOGIN TO SERVER (PEM & PPK) [public: aws, private: user]
+5. NETWORK = VPC, SECURITY GROUPS (0-65,535)
+6. STORAGE = EBS VOLUME (min=8 Gb, max=16 TB)
+7. SUMMARY = REVIEW & LAUNCH 
+
+SECURITY GROUPS: TO ALLOW AND RESTRICT THE TRAFFIC.
+TRAFFIC = INCOMING REQUEST AND OUTGOING RESPONSE
+
+
+CONNECT TO SERVER -- > CLICK ON CHECK BOX -- > CONNECT -- > CONNECT
+
+APACHE SERVER -- > TO SHOW THE APPLICATION 
+WEB SERVER:
+It is used to show the application.
+ex: apache, nginx 
+port: 80 
+
+#install apache(web server) git(code)
+yum install httpd git -y
+
+#start the web server
+systemctl start httpd
+systemctl status httpd
+
+#insert the code on default path of apache
+cd /var/www/html
+git clone https://github.com/CleverProgrammers/pwj-netflix-clone.git
+mv pwj-netflix-clone/* .
+
+NOTE: For all free and open-source better to prefer n-1 version.
+
+
+DIS ADVANTAGES OF WINDOWS:
+1. HANG
+2. PAID
+3. NOT MULTI-USER BASED
+4. NOT SUPPORTING FOR MULTI-TASKING
+
+
+WHY LINUX 
+LINUX IS A FREE AND OPENSOURCE OS
+LINUX SYSTEMS WILL NOT NOT HANG FREQUENTLY.
+IT IS A MULTI-USER-BASED OS
+IT WILL SUPPORTED FOR MULTI-TASKING
+
+
+WHAT IS LINUX 
+IT IS A FREE AND OPEN-SOURCE OS.
+
+OPERATION SYSTEM: Its used for communication blw user and system.
+OPEN-SOURCE: We can see the code, change the code and distribute the code.
+
+Linux torvalds invented the linux with c language.
+linux comes in market 1991.
+
+FLAVORS/DISTRIBUTIONS:
+
+IPHONE: MINI, PLUS, PRO, PROMAX 
+LINUX: REDHAT, CENTOS, FEDORA, AMAZONLINUX, UBUTNU, DEBIAN 
+
+DOWNLOAD LINUX: NOT REQ
+
+WHERE: 
+ANDROID
+SMART WATCHES, TV
+SERVERS
+SUPER COMPUTERS (500/500)
 
 
