@@ -175,4 +175,48 @@ SMART WATCHES, TV
 SERVERS
 SUPER COMPUTERS (500/500)
 
+=================================================
+STEP-1: USER EMAIL, NAME & CODE AND PASSWORD
+STEP-2: Contact Information 
+STEP-3: Billing Information 
+STEP-4: VERIFY CONTACT 
+
+
+LINUX COMMANDS: 
+
+MODES OF LINUX:
+GUI: GRAPHIC USER INTERFACE
+CLI: COMMAND LINE INTERFACE
+
+By default we login with ec2-user 
+but in real we work with root user.
+(ec2-user: default root=admin)
+
+
+
+sudo -i: to switch to root user
+clear/ ctlr l: to clear the screen
+touch file1: to create a file
+ls/ll: to list the files
+cat file: to show content in file1
+cat>>file1: to insert content in file1
+ctrl d: to save the content
+cp file1 file2: to copy the content from file1 to file2
+mv file1 raham: to rename file to raham
+rm file1: to remove the file1
+rm file2 -f: to remove file2 forcefully
+touch file{1..10}: to create file1 to file10
+rm * -f: to remove all files forcefully
+rm j* -f: to remove all files starting with j
+rm p* -f: to remove all files starting with p
+
+
+head file1: shows first 10 lines
+head -5 file1: it shows first 5 lines
+head -12 file1: it shows first 12 lines	
+tail file1: shows bottom 10 lines
+tail -5 file1: it shows bottom 5 lines
+tail -12 file1: it shows bottom 12 lines	
+
+sed -n '5,15p' file1: to pint line 5 to 15
 
