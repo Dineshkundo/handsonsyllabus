@@ -220,3 +220,66 @@ tail -12 file1: it shows bottom 12 lines
 
 sed -n '5,15p' file1: to pint line 5 to 15
 
+========================================================
+
+DAY-02:
+
+PERMISSIONS:
+-    rw-r--r-- 1 root root 0 Aug  9 12:51 raham
+
+TYPE OF FILES IN LINUX:
+-	: regular file
+b	: blocked file
+c	: charcter file
+d	: directory (folder)
+l	: linked file
+
+PERMISSIONS:
+
+READ	: r	: 4
+WRITE	: w	: 2
+EXECUTABLE: x	: 1
+
+PARTS:
+USER: rw : 6
+GROUP: r : 4
+OTHERS: r : 4
+
+
+M-1: chmod 777 filename
+M-2: chmod u=rw,g=rwx,o=x raham
+M-3: chmod -r raham 
+
+
+USERS & GROUPS:
+WHY TO CREATE USERS: In real time if we want to work with servers we need to have user and password to login .
+
+server -- > user & password
+
+useradd raham	: to create user
+cat /etc/passwd : to list users
+getent passwd   : to list users
+passwd raham	: to give password
+su - raham	: to login as raham users
+ctrl d		: to logout form raham user
+
+NOTE:
+username should not password
+length must be 8 charc
+password will not be visible.
+
+user = group & folder will created
+
+cat /etc/group: to list group
+getent group: to list group
+ls /home
+userdel revi
+
+if we del user group will go but not the folder.
+
+chown raham:raham filename 
+
+chown means change ownership
+we use this command to change the user
+
+
