@@ -282,4 +282,58 @@ chown raham:raham filename
 chown means change ownership
 we use this command to change the user
 
+====================================================
 
+EDITORS: To edit and add the content in a file.
+TYPES:
+1. VIM/VI
+2. NANO
+
+i to insert the conetnt
+esc to get back
+
+
+1. command mode
+2. insert mode
+3. save mode
+
+SAVE MODE:
+:w	: save
+:q 	: quit
+:wq	: save & quit
+:wq!	: save & quit forecfully
+INSERT MODE:
+i	: to insert the content
+I	: starting of line
+A	: Ending of line
+O	: Create new line above existing
+o	: Create new line below existing
+
+COMMAND MODE
+gg	: top of file
+shift g	: bottom of file
+yy	: copies single line
+3yy	: copies 3 lines
+p	: paste single time
+3p	: paste 3 times
+dd	: delete single line
+10dd	: deletes 10 lines
+u	: to undo
+:15	: goes to line 15
+:25	: goes to line 25
+:set number: to print line numbers
+/word	: to search for a word inside a file
+
+GREP: To search the words outside a file
+grep word file1 	: to search for word in file1
+grep word file1 -i	: to search for word in file1 (to avoid casesensitive)
+grep 'word1\|word2' file1 -i : to search multiple words
+grep word file1 -i -v	: -v to aviod the word
+cat file1 | grep raham -i
+
+HARWARE COMMANDS:
+lscpu: to show cpu info (cat /proc/cpuinfo)
+lsmem: to show RAM info (cat /proc/meminfo)
+fdisk -l: to show rom (df/df -h/df -m)
+uname: to print os
+cat /etc/os-release: to show flavor
