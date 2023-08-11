@@ -337,3 +337,43 @@ lsmem: to show RAM info (cat /proc/meminfo)
 fdisk -l: to show rom (df/df -h/df -m)
 uname: to print os
 cat /etc/os-release: to show flavor
+
+==============================================
+
+SED: stream editor
+to replace the word in a file.
+
+inside of file - :%s/word1/word2/
+
+outside of file - 
+sed 's/ravi/raju/' file1 >> file2
+sed 's/ravi/raju/;s/is/are/' file1 >> file3
+sed '2c hai all' file1
+
+
+
+=====================================================================
+
+ADVANCE COMMANDS:
+
+scenario-1: what u will do when the server runs slowly?
+
+1. check the cpu & memory utilization. (top)
+   yum install htop -y 
+
+2. check the instance checks 
+   we need to restart the server.
+
+scenario-2: how u can check active ports for the server
+netstat 
+
+scenario-3: how to check the process in Linux
+how will you check your app is running inside the server
+
+ps -ef
+ps aux
+ps -ef | grep 80
+
+to kill process: kill -9 pid
+
+
